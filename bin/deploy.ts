@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import { OptionValues } from "commander";
-import ghpages from "gh-pages";
 import {
   inputValidation,
   transformInputValue,
@@ -9,6 +8,7 @@ import {
 } from "./processingData.js";
 import { showMessageWarning } from "./utils.js";
 import { defaults } from "./constants.js";
+import { publish } from "./publish.js";
 
 export const deployAction = (args: OptionValues) => {
   try {
@@ -27,11 +27,7 @@ export const deployAction = (args: OptionValues) => {
       }
     }
 
-    ghpages.publish(options.dir, options, (err) => {
-      if (err) {
-        throw err;
-      }
-    });
+    publish(options);
   } catch (e: unknown) {
     console.log((e as unknown as Error).message);
   }

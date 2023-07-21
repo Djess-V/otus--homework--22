@@ -26,6 +26,12 @@ module.exports = {
   },
   plugins: ["@typescript-eslint"],
   rules: {
+    "prettier/prettier": [
+      "error",
+      {
+        endOfLine: "auto",
+      },
+    ],
     "no-useless-escape": "off",
   },
 };

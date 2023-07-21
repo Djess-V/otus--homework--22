@@ -2,11 +2,11 @@
 
 import { green } from "colorette";
 import { Command } from "commander";
-import { configAction } from "./config.js";
-import pkg from "../package.json" assert { type: "json" };
-import { defaults } from "./constants.js";
-import { deployAction } from "./deploy.js";
-import { buildAction } from "./build.js";
+import shell from "shelljs";
+import { configAction } from "./bin/config.js";
+import pkg from "./package.json" assert { type: "json" };
+import { defaults } from "./bin/constants.js";
+import { deployAction } from "./bin/deploy.js";
 
 export const program = new Command();
 
@@ -83,6 +83,8 @@ program
       'This command is for pre-building with webpack. To work correctly, you must have webpack, webpac-cli installed, webpack.config.(j|t)s configured and script "build" defined in package.json for production build.',
     ),
   )
-  .action(buildAction);
+  .action(() => {
+    shell.exec("npm run build");
+  });
 
 program.parse();
