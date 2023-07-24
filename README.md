@@ -8,15 +8,13 @@
 
 Console application for publishing pages to github.
 
-## How to use:
-
-<hr>
-
-### Global installation
+## Global installation
 
 ```properties
 npm install -g djess-deploy-gh-pages
 ```
+
+## How to use:
 
 ### Command - deploy
 
