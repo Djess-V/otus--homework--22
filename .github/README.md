@@ -46,7 +46,7 @@ Note: the git user must be authorized, the remote repository must be linked to t
 npx djess-deploy-gh-pages deploy
 ```
 
-<img alt="DeployWithoutParameters" src="./assets/gif/CommandDeployWithoutParams.gif" width="790px" height="340px"/>
+<img alt="DeployWithoutParameters" src="../assets/gif/CommandDeployWithoutParams.gif" width="790px" height="340px"/>
 
 #### Deploy with parameters
 
@@ -56,7 +56,7 @@ Using the parameters you can change the deployment configuration
 npx djess-deploy-gh-pages --dir docs --repo https://github.com/Djess-V/otus--homework--22.git -m Hello!
 ```
 
-<img alt="DeployWithParameters" src="./assets/gif/CommandDeployWithParams.gif" width="790px" height="340px"/>
+<img alt="DeployWithParameters" src="../assets/gif/CommandDeployWithParams.gif" width="790px" height="340px"/>
 
 ### Command - config
 
@@ -66,7 +66,7 @@ Use this command to configure the deployment configuration through the command l
 npx djess-deploy-gh-pages config
 ```
 
-<img alt="Config" src="./assets/gif/CommandConfig.gif" width="790px" height="340px"/>
+<img alt="Config" src="../assets/gif/CommandConfig.gif" width="790px" height="340px"/>
 
 ### Command - build
 
@@ -76,4 +76,4 @@ This command is for pre-building with webpack. To work correctly, you must have 
 npx djess-deploy-gh-pages build
 ```
 
-<img alt="Build" src="./assets/gif/CommandBuild.gif" width="790px" height="340px"/>
+<img alt="Build" src="../assets/gif/CommandBuild.gif" width="790px" height="340px"/>
