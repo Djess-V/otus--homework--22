@@ -1,10 +1,12 @@
 {
-  "name": "@djess-v/gh-pages",
-  "version": "1.0.0",
+  "name": "djess-deploy-gh-pages",
+  "version": "1.0.4",
   "description": "Сonsole application for publishing pages to github",
-  "main": "bin/index.js",
+  "main": "build/index.js",
   "type": "module",
-  "files": [],
+  "files": [
+    "./build"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/Djess-V/otus--homework--22.git"
@@ -12,35 +14,39 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "start": "nodemon -e ts --exec \"node --loader ts-node/esm src/index.ts\"",
-    "deploy": "node --loader ts-node/esm src/index.ts deploy",
-    "publish": "npx tsc && npm publish",
-    "prepare": "husky install"
+    "start": "nodemon -e ts --exec \"node --loader ts-node/esm index.ts\"",
+    "deploy": "node --loader ts-node/esm index.ts deploy",
+    "config": "node --loader ts-node/esm index.ts config",
+    "compile": "tsc && tsc-alias"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bin": {
-    "djess-deploy-gh": "bin/index.js"
+    "djess-deploy-gh-pages": "build/index.js"
   },
   "devDependencies": {
     "@types/gh-pages": "^3.2.1",
     "@types/node": "^20.4.2",
+    "@types/shelljs": "^0.8.12",
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@typescript-eslint/parser": "^6.1.0",
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^5.0.0",
     "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
     "nodemon": "^3.0.1",
     "prettier": "^3.0.0",
     "ts-node": "^10.9.1",
+    "tsc-alias": "^1.8.7",
     "typescript": "^5.1.6"
   },
   "dependencies": {
     "colorette": "^2.0.20",
     "commander": "^11.0.0",
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^5.0.0",
+    "shelljs": "^0.8.5"
   },
   "lint-staged": {
     "*.{js,ts}": "eslint --cache --fix",
