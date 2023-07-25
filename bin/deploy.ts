@@ -6,9 +6,9 @@ import {
   transformInputValue,
   updateConfig,
 } from "./processingData.js";
-import { showMessageWarning } from "./utils.js";
-import { defaults } from "./constants.js";
-import { publish } from "./publish.js";
+import { showMessageWarning } from "./utils";
+import { defaults } from "./constants";
+import { publish } from "./publish";
 
 export const deployAction = (args: OptionValues) => {
   try {

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { OptionValues } from "commander";
-import { queries } from "./constants.js";
+import { queries } from "./constants";
 
 type ITransformValue =
   | string

@@ -3,10 +3,10 @@
 import { green } from "colorette";
 import { Command } from "commander";
 import shell from "shelljs";
-import { configAction } from "./bin/config.js";
+import { configAction } from "./bin/config";
 import pkg from "./package.json" assert { type: "json" };
-import { defaults } from "./bin/constants.js";
-import { deployAction } from "./bin/deploy.js";
+import { defaults } from "./bin/constants";
+import { deployAction } from "./bin/deploy";
 
 export const program = new Command();
 

@@ -8,10 +8,10 @@ import {
   inputValidation,
   transformInputValue,
   updateConfig,
-} from "./processingData.js";
-import { defaults, queries } from "./constants.js";
-import { showMessageWarning, showSuccessMessage } from "./utils.js";
-import { publish } from "./publish.js";
+} from "./processingData";
+import { defaults, queries } from "./constants";
+import { showMessageWarning, showSuccessMessage } from "./utils";
+import { publish } from "./publish";
 
 export const configAction = async () => {
   try {

@@ -1,14 +1,11 @@
 {
   "name": "djess-deploy-gh-pages",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Сonsole application for publishing pages to github",
-  "main": "index.js",
+  "main": "build/index.js",
   "type": "module",
   "files": [
-    "./assets",
-    "index.d.ts",
-    "bin/*.js",
-    "bin/*.d.ts"
+    "./build"
   ],
   "repository": {
     "type": "git",
@@ -26,7 +23,7 @@
   "author": "",
   "license": "ISC",
   "bin": {
-    "djess-deploy-gh-pages": "index.js"
+    "djess-deploy-gh-pages": "build/index.js"
   },
   "devDependencies": {
     "@types/gh-pages": "^3.2.1",
